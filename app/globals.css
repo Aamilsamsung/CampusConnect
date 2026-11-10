@@ -244,3 +244,91 @@ body{background:#050c1d;color:#eef3ff;font-family:'DM Sans',sans-serif}
 @media(max-width:1350px){.frame{grid-template-columns:225px minmax(0,1fr) 280px}.global-links{gap:0}.global-links button{padding:0 9px;font-size:12px}.global-search{min-width:160px}.global-brand{font-size:12px}}
 @media(max-width:1150px){.frame{grid-template-columns:215px minmax(0,1fr)}.rail{display:none}.global-search{display:none}.global-links button{padding:0 12px}}
 @media(max-width:760px){.frame{display:block;padding:0 12px}.global-top{height:62px;margin:0 -12px;padding:0 17px}.global-links{display:none}.global-brand{font-size:12px}.global-profile span:not(.avatar){display:none}.sidebar{display:none}.center{display:block}.content{padding:17px 0 100px}.hello{padding:3px 2px 5px}.heading{font-size:22px}.stories{padding:13px 9px;gap:8px}.story{flex:0 0 68px;padding:9px 3px}.story-ring{width:52px;height:52px}.post{padding:15px}.composer{padding:13px}.mobile-nav{background:#0b1935}.tag{display:none}}
+
+
+/* v4 — communication-first product UI, simplified Instagram/Discord patterns */
+:root{--bg:#0e0f13;--card:#17191e;--card2:#1e2027;--edge:#2c2f38;--text:#f4f4f6;--muted:#999da8;--accent:#738dff;--accent2:#536deb}
+body,.app{background:#0e0f13;color:#f2f3f7}
+.frame{grid-template-columns:232px minmax(0,1fr) 286px;grid-template-rows:64px minmax(0,1fr);gap:0;max-width:1500px;margin:auto;padding:0 12px}
+.global-top{height:64px;margin:0 -12px;padding:0 22px;background:#111216;border-bottom:1px solid #292b32}
+.global-brand{font-size:13px;letter-spacing:.8px;font-weight:750}
+.global-mark{color:#8092ff;text-shadow:none;font-size:23px}
+.global-links{gap:1px}
+.global-links button{font-size:12px;color:#aaaeb9;padding:0 11px}
+.global-links button.selected{color:#c4ccff;border-bottom-color:#8092ff}
+.global-links button:hover{color:#fff}
+.global-search{background:#1c1e25;border-color:#2b2e38;border-radius:8px;color:#8d929f}
+.global-profile{font-size:12px}
+.sidebar{background:#111216;border:0;border-right:1px solid #292b32;border-radius:0;top:64px;height:calc(100vh - 64px);margin:0;padding:23px 13px}
+.nav button{font-size:13px;border-radius:8px;color:#aeb1bd;padding:12px 14px}
+.nav button:hover{background:#202229}
+.nav button.active{background:#282b3b;color:#dce1ff;box-shadow:none}
+.section-label{color:#6f7480}
+.invite{background:#1a1c24;border-color:#2c2f3c}
+.invite .invite-icon{color:#8996ff}
+.invite button{background:#303856;border-color:#485681}
+.center{border-right:1px solid #292b32}
+.content{max-width:710px;margin:auto;padding:26px 26px 110px}
+.hello{padding:0;margin-bottom:24px;align-items:center}
+.heading{font-size:24px;letter-spacing:-.8px;margin:0 0 5px}
+.intro{font-size:12px;color:#8d929e}
+.card{background:#17191e;border-color:#2a2d35;border-radius:11px}
+.composer{margin:0 0 22px;padding:17px}
+.composer textarea{background:transparent;border:0;border-radius:0;min-height:54px;color:#f0f0f3;padding:9px 0}
+.composer-foot{border-color:#2b2e37}
+.primary{background:#7186f7;border:1px solid #7186f7;color:#fff;box-shadow:none;border-radius:7px;font-size:12px}
+.primary:hover:not(:disabled){background:#8699ff}
+.secondary{background:#22252d;border:1px solid #363a45;color:#e2e4eb;border-radius:7px}
+.secondary:hover{border-color:#7b83a4}
+.feed-top{margin:0 3px 13px}
+.feed-top strong{font-size:14px}
+.feed-tabs button.active{color:#b5beff;border-color:#8193ff}
+.post{padding:19px;margin-bottom:12px;animation:none}
+.post:hover{border-color:#343945}
+.person b{color:#f0f0f3}
+.person .meta{color:#9296a1}
+.person .meta .verified{color:#899aff}
+.post-body{color:#d8dae1;font-size:13px;line-height:1.7}
+.post-actions{border-color:#2c3039}
+.post-actions button{color:#a0a3af}
+.post-actions button:hover,.post-actions button.liked{color:#9ba9ff}
+.avatar{background:#3d4255;border-color:#515971}
+.rail{top:64px;height:calc(100vh - 64px);padding:25px 16px;background:#111216}
+.rail-title{font-size:13px;color:#e9eaf0}
+.rail-title small{color:#9aa7ff}
+.rail .community-mini{background:#17191e;border-color:#2b2e38}
+.community-icon{background:#2a3048;color:#a2afff}
+.community-mini small{color:#8e93a1}
+.join{background:#252a3e;border-color:#3c4568;color:#b4bfff}
+.event-mini{background:#191b23;border-color:#2b2e39;border-left-color:#7d8ef6}
+.event-mini .event-date{color:#9ca8ff}
+.rail-foot{border-color:#2c2e36}
+.demo-banner{background:#22222b;border-color:#454151;color:#c2becd}
+.field{background:#12141a;border-color:#353946;color:#f3f3f7}
+.field:focus{border-color:#8190ee}
+.student-card,.community-card,.feature-card{background:#17191e}
+.student-actions{display:flex;gap:8px;flex-wrap:wrap}
+.student-actions .primary,.student-actions .secondary{flex:1}
+.community-banner{background:#303650}
+.community-card:nth-child(2n) .community-banner{background:#2c4143}
+.messages-layout{grid-template-columns:235px minmax(0,1fr);min-height:570px}
+.message-list{padding:13px 10px;background:#15171d}
+.chat-filter{width:calc(100% - 12px);margin:0 6px 13px;padding:10px 11px;font-size:12px}
+.chat-person{font-size:12px;padding:11px 8px;border-radius:8px}
+.chat-person.selected{background:#282d40}
+.chat-title{padding:14px 17px;border-color:#30333c}
+.chat-header-person{display:flex;align-items:center;gap:11px}
+.chat-header-person strong{display:block;font-size:13px}
+.chat-header-person small{display:block;font-weight:400;color:#9499a6;margin-top:4px;font-size:11px}
+.chat-body{min-height:370px}
+.bubble{background:#292c36;border-radius:13px;padding:11px 14px}
+.bubble.mine{background:#454f88}
+.chat-input{border-color:#30333c}
+.search-inline{background:#191b22;border-color:#363a44}
+.auth-card{background:#191b22;border-color:#3c404a}
+.auth-tabs button{background:#242630;border-color:#3b3e4b}
+.auth-tabs button.active{background:#39416a;border-color:#7183e0}
+.mobile-nav{background:#161820;border-color:#353846}
+.mobile-nav button.active{color:#aebaff}
+@media(max-width:1200px){.frame{grid-template-columns:215px minmax(0,1fr)}.rail{display:none}.center{border-right:0}}
+@media(max-width:760px){.frame{padding:0 10px;display:block}.global-top{height:60px;margin:0 -10px}.global-brand{font-size:12px}.content{padding:23px 3px 95px}.hello{padding:0 8px}.post{padding:16px}.composer{padding:15px}.messages-layout{grid-template-columns:110px minmax(0,1fr);min-height:540px}.message-list{padding:9px 4px}.chat-person{flex-direction:column;text-align:center;gap:6px;font-size:10px}.chat-person .avatar{width:34px;height:34px}.chat-filter{width:calc(100% - 6px);margin:0 3px 10px;padding:8px 5px;font-size:10px}.chat-body{min-height:340px}.chat-title{padding:12px}.global-profile{padding:0}.mobile-nav{background:#161820}}
