@@ -23,3 +23,7 @@ Create a Node web service connected to this repo, on the free plan in Singapore.
 
 ## Security
 The SQL script enables RLS and verifies email domains in the database trigger. The verified college association cannot be edited by normal users. Never commit passwords, tokens or private configuration. There is no moderation/admin queue yet, so the app must not be treated as a publicly safe student community.
+
+## UI source attribution
+
+The feed layout adapts the `HomePage.jsx` column structure from [Socialgram](https://github.com/ParmodKumar28/Socialgram) by Parmod Kumar (ISC License, Copyright (c) 2026 Parmod Kumar). The original source's centered 640px story/feed column and 480px post column are adapted to CampusConnect's Next.js/Supabase architecture. The implementation is not affiliated with Instagram or Meta. The original project's ISC license and warranty disclaimer apply to the adapted portions; see [the upstream LICENSE](https://github.com/ParmodKumar28/Socialgram/blob/main/LICENSE).
