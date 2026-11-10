@@ -122,3 +122,16 @@ body{background:#fff;color:#0f0f0f;font-family:Arial,Helvetica,sans-serif;font-s
 @media(max-width:1150px){.frame{grid-template-columns:230px minmax(0,1fr)}.rail{display:none}}
 @media(max-width:800px){.frame{grid-template-columns:75px minmax(0,1fr)}.sidebar{padding:28px 9px}.sidebar-brand{padding:0 9px;overflow:hidden;width:51px}.instagram-wordmark{font-size:0}.instagram-wordmark:before{content:"C";font-family:Arial,sans-serif;font-size:28px;font-weight:800}.nav button{justify-content:center;padding:12px}.side-create{justify-content:center;font-size:0}.side-create svg{flex-shrink:0}.sidebar-account{justify-content:center;padding:10px}.sidebar-account>span:not(.avatar),.sidebar-account>svg{display:none}.content{padding:27px 16px 90px}}
 @media(max-width:650px){.frame{display:block}.sidebar{display:none}.topbar{display:flex;height:55px;border-bottom:1px solid #dbdbdb;padding:0 15px}.mobile-brand{font-family:"Brush Script MT","Segoe Script",cursive;font-size:24px;color:#111}.breadcrumbs>strong{display:none}.content{padding:17px 12px 90px}.mobile-nav{background:#fff;border-top:1px solid #dbdbdb}.mobile-nav button.active{color:#111}.people-strip{margin-bottom:15px}.story-ring{width:61px;height:61px}.story-ring .avatar{width:51px;height:51px}.person-story{min-width:64px;width:64px}.composer{margin-bottom:15px}}
+
+
+/* Layout port based on Socialgram's HomePage.jsx:
+   centered 640px stories/feed shell, 480px post column, separate right rail.
+   Original Socialgram source: ParmodKumar28/Socialgram (ISC). */
+.socialgram-home{width:100%;max-width:1100px;margin:0 auto;display:flex;justify-content:center;padding:8px 0 20px}
+.socialgram-main{width:100%;max-width:640px;display:flex;flex-direction:column;align-items:center}
+.socialgram-stories{width:100%;margin-bottom:8px}
+.socialgram-posts{width:100%;max-width:480px}
+.socialgram-posts .composer{margin-bottom:20px}
+.socialgram-posts .feed-top{margin-top:5px}
+.socialgram-posts .post{width:100%}
+@media(max-width:650px){.socialgram-home{padding-top:0}.socialgram-posts{max-width:100%}.socialgram-stories{margin-bottom:0}}
