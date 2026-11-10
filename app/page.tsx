@@ -1,2 +1,2 @@
-import CampusApp from "@/components/CampusApp";
+import CampusApp from "../components/CampusApp";
 export default function Home(){ return <CampusApp/>; }
