@@ -135,3 +135,64 @@ body{background:#fff;color:#0f0f0f;font-family:Arial,Helvetica,sans-serif;font-s
 .socialgram-posts .feed-top{margin-top:5px}
 .socialgram-posts .post{width:100%}
 @media(max-width:650px){.socialgram-home{padding-top:0}.socialgram-posts{max-width:100%}.socialgram-stories{margin-bottom:0}}
+
+
+/* Snapgram visual implementation, adapting adrianhajdin/social_media_app
+   RootLayout, Home, PostCard and responsive bottom-bar proportions. */
+:root{color-scheme:dark;--bg:#09090a;--panel:#101012;--panel2:#1f1f22;--line:#29292c;--text:#fff;--muted:#a2a2a7;--accent:#877eff;--sidebar:#101012}
+body{background:#09090a;color:#fff;font-family:Inter,Arial,sans-serif}
+.frame{max-width:none;grid-template-columns:270px minmax(0,1fr) 288px;background:#09090a}
+.sidebar{background:#101012;border-right:0;padding:38px 24px}
+.sidebar-brand{font-size:24px;margin-bottom:46px;padding:0 6px;color:#fff}
+.snapgram-wordmark{font-family:Inter,Arial,sans-serif;font-size:23px;font-weight:800;letter-spacing:-.9px}
+.brand-dot{color:#877eff}
+.nav{gap:10px}.nav button{color:#e5e5e8;font-size:16px;font-weight:500;padding:15px 17px;border-radius:9px}
+.nav button:hover{background:#34305d;color:#fff}.nav button.active{background:#877eff;color:#fff;font-weight:600}
+.nav button.active:before{display:none}.nav button svg{width:23px;height:23px}
+.sidebar-separator{background:#2c2c30}.section-label{color:#777782}
+.side-create{background:#877eff;color:#fff;border-radius:10px;font-size:14px;font-weight:650;justify-content:center;padding:14px}
+.side-create:hover{background:#7369e8}.sidebar-account{background:#1e1e21;border:1px solid #303035;color:#fff}
+.sidebar-account:hover{background:#29292d}.sidebar-account small{color:#999}
+.center{background:#09090a;border:0}.topbar{display:none}
+.content{max-width:none;padding:0;margin:0}
+.snapgram-home{width:100%;display:flex;flex-direction:column;align-items:center;padding:45px 32px 80px;gap:25px}
+.snapgram-main{width:100%;max-width:665px;display:flex;flex-direction:column;align-items:stretch;gap:20px}
+.snapgram-heading{font-size:30px;font-weight:750;line-height:1.35;letter-spacing:-1px;margin:0 0 4px;color:#fff}
+.socialgram-stories{width:100%;margin:0}.socialgram-posts,.snapgram-posts{width:100%;max-width:665px}
+.people-strip{background:#101012;border:1px solid #29292c;border-radius:22px;padding:19px 20px;margin:0}
+.people-scroll{gap:19px}.person-story{color:#eee}.people-empty{color:#a2a2a7}
+.story-ring{background:#24222e;border:2px solid #877eff}.story-ring.own{background:#24222e;border-color:#777}.story-plus{background:#877eff}
+.composer{background:#101012;border:1px solid #29292c;border-radius:24px;padding:20px 24px;margin:0 0 25px}
+.composer textarea{color:#fff;min-height:65px}.composer textarea::placeholder{color:#85858b}
+.composer-foot{border-color:#29292c}.tool{color:#a3a3a9}
+.primary{background:#877eff;color:#fff;border:1px solid #877eff;border-radius:9px}
+.primary:hover:not(:disabled){background:#7168e3}.secondary{background:#1f1f22;border:1px solid #323236;color:#eee}
+.secondary:hover{background:#29292e}
+.feed-top{border-bottom:0;margin:0 0 19px;padding:0}.feed-top strong{font-size:18px;color:#fff}
+.feed-tabs button{color:#a1a1a9}.feed-tabs button.active{color:#fff;border-color:#877eff}
+.post{background:#101012;border:1px solid #29292c;border-radius:25px;padding:25px 28px;margin:0 0 25px;box-shadow:none}
+.post:hover{border-color:#42424b}.post-head{padding-bottom:0}
+.person b{color:#fff;font-size:15px}.person .meta{color:#a0a0a7}
+.post-body{font-size:15px;line-height:1.7;margin:22px 0;color:#f1f1f4}
+.post-actions{border-top:1px solid #29292c;padding:15px 0 0}.post-actions button{color:#eee}.post-actions button.liked{color:#ff6b91}
+.thread{background:#101012;border-color:#29292c}.comment{color:#d9d9df}.comment strong{color:#fff}
+.empty-state{background:#101012;border:1px solid #29292c;border-radius:24px;color:#a2a2a7}
+.empty-state h2{color:#fff}.empty-glyph{background:#25242d;color:#aaa3ff}
+.rail{background:#101012;border-left:1px solid #29292c;padding:48px 20px}
+.rail-title{color:#fff}.rail-title button{color:#a9a0ff}.community-mini b{color:#fff}.community-mini small{color:#999}
+.search-wrap,.search-inline{background:#1f1f22;border-color:#303035;color:#fff}.search-wrap input,.search-inline input{color:#fff}
+.community-icon{background:#25232f;color:#b3aaff}.join{background:#25232f;color:#eee;border-color:#35343c}
+.event-mini{border-color:#35343c}.event-mini b{color:#eee}.event-mini small,.section-desc{color:#a2a2a7}
+.rail-foot{border-color:#29292c;color:#85858d}
+.card{background:#101012;border:1px solid #29292c;border-radius:24px;color:#fff}
+.student-card b,.community-card b{color:#fff}.student-card small,.community-card small,.student-card p,.community-card p{color:#a2a2a7}
+.field{background:#1f1f22;border:1px solid #333339;color:#fff}.field::placeholder{color:#85858b}
+.messages-layout{background:#101012;border:1px solid #29292c}.message-list{background:#101012;border-color:#29292c}
+.chat-person{color:#eee}.chat-person:hover,.chat-person.selected{background:#2c2944}.chat-title{border-color:#29292c}
+.chat-body{background:#09090a}.chat-header-person small{color:#aaa}.bubble{background:#29292d;color:#fff}.bubble.mine{background:#49417c;color:#fff}.chat-input{border-color:#29292c}
+.auth-card{background:#101012;color:#fff;border-color:#303036}.auth-card h2{color:#fff}.auth-card p,.auth-card label{color:#aaa}
+.auth-tabs button{background:#242428;color:#aaa}.auth-tabs button.active{background:#877eff;color:#fff}
+.setup-notice{background:#302a18;border-color:#67552a;color:#eadca8}
+@media(max-width:1150px){.frame{grid-template-columns:270px minmax(0,1fr)}.rail{display:none}}
+@media(max-width:800px){.frame{grid-template-columns:75px minmax(0,1fr)}.sidebar{padding:30px 10px}.sidebar-brand{width:52px;padding:0 10px;overflow:hidden}.snapgram-wordmark{font-size:0}.snapgram-wordmark:before{content:"C";font-size:26px;color:#fff}.nav button{justify-content:center;padding:12px}.side-create{font-size:0}.sidebar-account>span:not(.avatar),.sidebar-account>svg{display:none}.snapgram-home{padding:35px 24px 70px}}
+@media(max-width:650px){.frame{display:block}.sidebar{display:none}.topbar{display:flex;background:#101012;border-bottom:1px solid #29292c}.mobile-brand{font-family:Inter,Arial,sans-serif;color:#fff;font-size:21px;font-weight:750}.breadcrumbs>strong{display:none}.content{padding:0}.snapgram-home{padding:24px 15px 100px}.snapgram-heading{font-size:25px}.socialgram-stories{margin-bottom:0}.snapgram-posts{max-width:100%}.post{padding:18px;border-radius:20px}.composer{padding:16px;border-radius:19px}.mobile-nav{background:#101012;border:0;border-radius:20px 20px 0 0;padding:12px 7px}.mobile-nav button{color:#aaa}.mobile-nav button.active{background:#877eff;color:#fff;border-radius:10px}.people-strip{padding:14px}}
